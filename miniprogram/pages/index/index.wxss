@@ -1,0 +1,27 @@
+view{
+  height: 650rpx;
+  width: 90%;
+  border: 2px ridge black;
+  text-align: center;
+  padding-top: 8%;
+  margin-top: 10%;
+  margin-left: 5%;
+  background-color: #cccccc;
+}
+button{
+  margin-top: 5%;
+}
+text{
+  font-size: 60rpx;
+  background-color: #eccdcd;
+}
+input{
+  border: 2px solid #222222;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20rpx;
+  text-align: left;
+  background-color: #ffffff;
+}

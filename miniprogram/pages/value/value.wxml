@@ -1,0 +1,77 @@
+<!--pages/value/value.wxml-->
+<view class="nav">
+  <view class="{{choice_style==0?'choice_style_yes':'choice_style_no'}}" id="0" bindtap="choice">电影列表</view>
+  <view class="{{choice_style==1?'choice_style_yes':'choice_style_no'}}" id="1" bindtap="choice">电影详情</view>
+  <view class="{{choice_style==2?'choice_style_yes':'choice_style_no'}}" id="2" bindtap="choice">我的购票</view>
+</view>
+
+<swiper class="swiper_hight" current="{{choice_style}}" bindchange="swiperSetId">
+
+  <!-- 列表栏 -->
+  <swiper-item id="0" >
+    <view class="haibao">
+      <swiper indicator-dots="true" interval="5000" duration="300" circular="true" display-multiple-items="1.1">
+        <block wx:for="{{images}}">
+          <swiper-item>
+            <image src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  
+  <view class="hr"></view>
+  <view>--列表页：点击内容跳转到内容页</view>
+  <view class="hr"></view>
+
+    <view class="con">
+      <block wx:for="{{imgUrl}}">
+        <view class="list" bindtap="list_tap" id="{{item.id}}">
+          <image class="itemimage" src="{{item.cover.url}}"></image>
+          <view>{{item.title}}</view>
+          <view>热度：{{item.year}}</view>
+        </view>
+      </block>
+    </view>
+  </swiper-item>
+
+
+
+<!-- 内容栏 -->
+  <swiper-item id="1">
+    <view>-内容页：需点击列表页内容触发更新操作</view>
+    <view class="conCover">
+      <image src="{{conUrl.cover_url}}" style="width:100%;"></image>
+      <view>
+        <view>{{conUrl.title}}</view>
+        <view>{{conUrl.card_subtitle}}</view>
+        <view>{{conUrl.durations}}</view>
+      </view>
+    </view>
+
+    <view class="goumai">
+      <input bindinput="goumai_input" placeholder="请输入购买票的数量" type="number" />
+      <button bindtap="goumai_button" size="mini" type="{{goumai_color}}" disabled="{{goumai_set}}">购买</button> 
+    </view>
+
+    <view class="jj">
+      <view>电影简介：</view>
+      <view>--{{conUrl.intro}}</view>
+    </view>
+  </swiper-item>
+
+
+
+<!-- 购票历史 -->
+  <swiper-item id="2">
+    <view class="goupiao_list">
+        <view class="goupiao_name">电影名字：</view>
+        <view class="goupiao_number">数量</view>
+      </view>
+    <block wx:for="{{goupiao.productionImage}}">
+      <view class="goupiao_list">
+        <view class="goupiao_name">{{item.name}}</view>
+        <view class="goupiao_number">{{item.number}}</view>
+      </view>
+    </block>
+  </swiper-item>
+</swiper>

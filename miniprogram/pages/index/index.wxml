@@ -1,0 +1,7 @@
+<view>
+  <text>**欢迎使用仿猫眼电影**</text>
+  <input placeholder="请输入账号：" maxlength="18" bindinput="input_user" />
+  <input placeholder="请输入密码：" maxlength="18" password="true" bindinput="input_password" />
+  <button type="primary" bindtap="sign_button">登录</button>
+  <button type="primary" bindtap="register_button">注册</button>
+</view>

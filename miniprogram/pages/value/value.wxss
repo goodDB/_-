@@ -1,0 +1,86 @@
+/* pages/value/value.wxss */
+.nav{
+  display: flex;
+  flex: auto;
+  width: 100%;
+  padding-left: 5%;
+  background-color: rgb(214, 199, 199);
+}
+.nav view{
+  margin: 5%;
+  height: 20px;
+  line-height: 20px;
+}
+.choice_style_yes{
+  border-bottom: red 5px solid;
+  padding-top: 5%;
+  font-size: 20px;
+}
+.choice_style_no{
+  border-bottom: solid 5px #000000;
+  font-size: 15px;
+}
+text{
+  height: 200px;
+  width: 100%;
+}
+.swiper_hight{
+  height: 2500px;
+  margin-bottom: 30px;
+}
+.con{
+
+}
+.list{
+  float: left;
+  width: 42%;
+  margin: 3%;
+  height: 311px;
+  border: red solid 2px;
+  text-align: center;
+}
+.itemimage{
+  width: 100%;
+
+}
+.hr{
+  background-color: red;
+  height: 5px;
+  margin-top: 5px;
+}
+.conCover{
+  margin-top: 8px;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #cccccc;
+}
+.jj{
+  margin: 5px;
+  background-color: rgb(209, 185, 79);
+}
+.goumai{
+  text-align: center;
+  border: solid 2px red;
+  margin: 5px 10px;
+  display: flex;
+  flex-direction: row;
+}
+.goupiao_list{
+  display: flex;
+  flex-direction: row;
+
+}
+.goupiao_name{
+  margin-left: 10px;
+  width: 80%;
+  border: #000000 solid 3px;
+  text-align: center;
+}
+.goupiao_number{
+    width: 15%;
+  border: #000000 solid 3px;
+  margin-right: 10px;
+  text-align: center;
+}
